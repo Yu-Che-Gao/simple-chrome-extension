@@ -9,6 +9,24 @@
         "default_popup": "popup.html",
         "default_title": "開始一趟探縮房屋的旅程"
     },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://rent.591.com.tw/*"
+            ],
+            "css": [
+                "css/jsInjection.css"
+            ],
+            "js": [
+                "js/jsInjection.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "https://rent.591.com.tw/*"
+    ],
     "name": "租屋天眼通",
     "version": "1.0.0"
 }
