@@ -1,27 +1,48 @@
 <html>
 
 <head>
-    <meta charset="utf-8"/>
-    <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/main.css" />
+    <meta charset="utf-8" />
+    <link rel=stylesheet type="text/css" href="css/amazeui.min.css">
+    <style>
+        body {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="menu">
-        <div id="main" class="item">
-            <img src="http://www.arefly.com/favicon.ico" width="16" height="16" />
-            <a href="http://www.arefly.com/" target="_blank">暢想資源主站</a>
+    <div data-am-widget="list_news" class="am-list-news am-list-news-default">
+        <div data-am-widget="titlebar" class="am-titlebar am-titlebar-multi">
+            <h2 class="am-titlebar-title ">
+                租屋天眼通
+            </h2>
+
+            <nav class="am-titlebar-nav">
+                <a href="#more" class="">more &raquo;</a>
+            </nav>
         </div>
-        <div id="tools" class="item">
-            <img src="http://tools.arefly.com/favicon.ico" width="16" height="16" />
-            <a href="http://tools.arefly.com/" target="_blank">小工具</a>
-        </div>
-        <hr />
-        <div id="about" class="item">
-            <img src="http://www.arefly.com/favicon.ico" width="16" height="16" />
-            <a href="http://www.arefly.com/about/" target="_blank">關於本站</a>
+
+        <div class="am-list-news-bd" style="width:90%;">
+            <ul class="am-list">
+                <li class="am-g am-list-item-dated">
+                    <a href="##" class="am-list-item-hd ">設置與說明書</a>
+                </li>
+                <li class="am-g am-list-item-dated">
+                    <a href="##" class="am-list-item-hd ">目前支援...</a>
+                </li>
+                <li class="am-g am-list-item-dated">
+                    <a href="##" class="am-list-item-hd ">關於我們</a>
+                </li>
+                <li class="am-g am-list-item-dated">
+                    <a href="https://github.com/Yu-Che-Gao/simple-chrome-extension" target="_blank" class="am-list-item-hd ">source code</a>
+                </li>
+            </ul>
         </div>
     </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/amazeui.min.js"></script>
 </body>
 
 </html>
