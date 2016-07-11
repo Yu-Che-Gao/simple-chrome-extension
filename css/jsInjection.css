@@ -1,5 +1,5 @@
-.comment {
-    
+h2 {
+    font-size: 28px;
 }
 
 .rce-comment{
@@ -9,6 +9,11 @@
     width: 100vw;
 }
 
-.front-end-app-components-Header-___styles__title___17Keu:before {
-    right: 1.5%;
+.rce-comment:after, .rce-comment:before {
+    border-top: 3px solid #111;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: .5em;
+    width: 45%;
 }
