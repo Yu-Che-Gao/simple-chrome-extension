@@ -1,4 +1,14 @@
-.blue {
-    color:red;
-    text-align:center;
+.comment {
+    
+}
+
+.rce-comment{
+    display: table;
+    white-space: nowrap;
+    text-align: center;
+    width: 100vw;
+}
+
+.front-end-app-components-Header-___styles__title___17Keu:before {
+    right: 1.5%;
 }

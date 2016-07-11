@@ -18,7 +18,7 @@
                 "css/jsInjection.css"
             ],
             "js": [
-                "js/jsInjection.js"
+                "js/comment.js", "js/jsInjection.js"
             ],
             "run_at": "document_end"
         }
