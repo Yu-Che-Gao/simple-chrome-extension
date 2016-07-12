@@ -12,13 +12,13 @@
     "content_scripts": [
         {
             "matches": [
-                "https://rent.591.com.tw/*"
+                "*://rent.591.com.tw/rent-detail-*.html"
             ],
             "css": [
                 "css/jsInjection.css"
             ],
             "js": [
-                "js/comment.js", "js/jsInjection.js"
+                "js/comment.js", "js/bom.js", "js/crawler.js", "js/index.js"
             ],
             "run_at": "document_end"
         }

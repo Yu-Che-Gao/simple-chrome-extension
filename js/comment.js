@@ -2,20 +2,35 @@ function getTitle(id, str) {
     return '<div id="' + id + '" class="rce-comment">' + str + '</div>';
 }
 
+function getDisqus() {
+    return '<div id="disqus_thread"></div>';
+}
+
+function setDisqus() {
+    var disqus_config = function () {
+        this.page.url = getHostName();  
+        this.page.identifier = identifier; 
+    };
+
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//rcerenthouse.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+
+    let disqusThread=document.getElementById('disqus_thread');
+
+    disqusThread.style.width='50%';
+    disqusThread.style.margin='auto';
+}
+
 Object.prototype.setWord = function () { //Object.setWord(colorStr, fontSize, fontFamily)
-    for (let i = 0; i < arguments.length; i++) {       
-        switch (i) {
-            case 0: //第一個輸入參數
-                if (arguments[i] != null) this.style.color = arguments[0];
-                break;
-
-            case 1: //第二個輸入參數
-                if (arguments[i] != null) this.style.fontSize = arguments[1];
-                break;
-
-            case 2: //第三個輸入參數
-                if (arguments[i] != null) this.style.fontFamily = arguments[2];
-                break;
+    let attributes = ['color', 'font-size', 'font-family'];
+    let temp = '';
+    for (let i = 0; i < attributes.length; i++) {
+        if (arguments[i] != null) {
+            this.style.cssText += attributes[i] + ':' + arguments[i] + ';';
         }
     }
 }
