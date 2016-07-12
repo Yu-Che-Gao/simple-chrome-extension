@@ -6,25 +6,6 @@ function getDisqus() {
     return '<div id="disqus_thread"></div>';
 }
 
-function setDisqus() {
-    var disqus_config = function () {
-        this.page.url = getHostName();  
-        this.page.identifier = identifier; 
-    };
-
-    (function () {
-        var d = document, s = d.createElement('script');
-        s.src = '//rcerenthouse.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-
-    let disqusThread=document.getElementById('disqus_thread');
-
-    disqusThread.style.width='50%';
-    disqusThread.style.margin='auto';
-}
-
 Object.prototype.setWord = function () { //Object.setWord(colorStr, fontSize, fontFamily)
     let attributes = ['color', 'font-size', 'font-family'];
     let temp = '';
