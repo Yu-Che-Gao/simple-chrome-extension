@@ -5,12 +5,3 @@ function getIdentifier() {
         return rent591Id + '/' + phoneNumber;
     }
 }
-
-function getPageHref() {
-    console.log(location.hostname);
-    if (location.hostname == 'rent.591.com.tw') {
-        let temp=getHrefWithoutGET();
-        temp=temp.filterString('http://', 'https://')
-        return temp;
-    }
-}
