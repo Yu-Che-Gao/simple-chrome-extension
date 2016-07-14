@@ -7,17 +7,12 @@ function getDisqus() {
 }
 
 function setDisqus() {
-    var disqus_url = location.href;
-    var disqus_identifier = getIdentifier();
-    var disqus_config = function () {
-        this.page.url = disqus_url;
-        this.page.identifier = disqus_identifier;
-    };
+    var disqus_shortname = 'renthouserobot';
 
     (function () {
         var d = document, s = d.createElement('script');
         s.asyc = true;
-        s.src = '//renthouserobot.disqus.com/embed.js';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
@@ -27,6 +22,7 @@ function setDisqus() {
     disqusThread.style.margin = 'auto';
 }
 
+//Object.setWord(fontColor, fontSize, fontFamily);
 Object.prototype.setWord = function () {
     let attributes = ['color', 'font-size', 'font-family'];
     let temp = '';

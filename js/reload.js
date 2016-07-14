@@ -1,4 +1,5 @@
-if(location.hostname=='rent.591.com.tw') {
+console.log(location.hostname);
+if(location.hostname=='rent.591.com.tw' || location.hostname=='www.591.com.tw') {
     if(location.search!='') {
         location.search='';
     }
