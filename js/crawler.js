@@ -5,3 +5,15 @@ function getIdentifier() {
         return rent591Id + '/' + phoneNumber;
     }
 }
+
+function getIdOfPage() {
+    if (location.hostname == 'rent.591.com.tw' || location.hostname == 'www.591.com.tw') {
+        return document.getElementById('propNav').querySelector('i').innerHTML.filterString('（', '）').trim();
+    }
+}
+
+function getPhoneNumberOfPage() {
+    if(location.hostname=='rent.591.com.tw' || location.hostname=='www.591.com.tw') {
+        return document.querySelector('.num').innerHTML.trim();
+    }
+}
