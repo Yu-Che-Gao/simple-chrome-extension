@@ -17,3 +17,23 @@ h2 {
     top: .5em;
     width: 45%;
 }
+
+.rce-history-header {
+    font-size: 1.5em!important;
+    margin-bottom: .8em;
+    color: #444;
+    font-family: "Helvetica Neue",arial,sans-serif;
+    font-size: 14px;
+}
+
+.rce-history-post {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25em;
+    color: rgb(0, 114, 188);
+}
+
+.rce-comment-counts {
+    color: rgba(30,55,70,.4);
+}

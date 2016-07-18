@@ -6,6 +6,10 @@ function getDisqus() {
     return '<div id="disqus_thread"></div>';
 }
 
+function getHistory() {
+    return '<div id="history" style="width: 50%; margin: auto; text-align: left;"><h2 class="rce-history-header">房東的各種Po房歷史</h2></div>';
+}
+
 function setDisqus() {
     var disqus_shortname = 'renthouserobot';
 

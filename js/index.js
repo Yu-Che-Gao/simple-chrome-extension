@@ -5,5 +5,6 @@ var title = document.getElementById('rce-title');
 title.setWord('blue', '28px', '微軟正黑體');
 
 body.innerHTML += getDisqus();
+body.innerHTML += getHistory();
 setDisqus();
 sendXHRToMiddle();
