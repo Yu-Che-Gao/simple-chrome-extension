@@ -24,7 +24,8 @@
             "matches": [
                 "*://www.591.com.tw/rent-detail-*.html*",
                 "*://rent.591.com.tw/rent-detail-*.html*",
-                "*://*.disqus.com/embed.js"
+                "*://*.disqus.com/embed.js",
+                "*://rent.housefun.com.tw/rent/house/*"
             ],"js":[
                 "js/reload.js"
             ],"run_at": "document_start"
@@ -33,7 +34,8 @@
             "matches": [
                 "*://www.591.com.tw/rent-detail-*.html*",
                 "*://rent.591.com.tw/rent-detail-*.html*",
-                "*://*.disqus.com/embed.js"
+                "*://*.disqus.com/embed.js",
+                "*://rent.housefun.com.tw/rent/house/*"
             ],
             "css": [
                 "css/jsInjection.css"

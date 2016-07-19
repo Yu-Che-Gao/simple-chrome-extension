@@ -17,10 +17,10 @@ function sendXHRToMiddle() {
                 let responseJSON = responseParse.response[i];
                 let history = document.getElementById('history');
 
-                history.innerHTML += '<div style="width: 50%;float:left;">' + historyLink(responseJSON.link, responseJSON.title) + '<br/>' + historyCounts(responseJSON.posts) + '</div>';
-                if (i % 3 == 0 && i != 0) {
-                    history.innerHTML += '<br/><br/>';
-                }
+                history.innerHTML += '<div style="width: 50%;float:left;text-align: left;">' + historyLink(responseJSON.link, responseJSON.title) + '<br/>' + historyCounts(responseJSON.posts) + '</div>';
+                // if (i % 1 == 0 && i != 0) {
+                //     history.innerHTML += '<br/><br/><br/>';
+                // }
             }
         }
     };
