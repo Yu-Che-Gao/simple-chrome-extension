@@ -19,11 +19,14 @@ h2 {
 }
 
 .rce-history-header {
+    text-align: left;
     font-size: 1.5em!important;
     margin-bottom: .8em;
     color: #444;
     font-family: "Helvetica Neue",arial,sans-serif;
     font-size: 14px;
+    border-bottom: 2px #e7e9ee solid;
+    padding-top: 30px;
 }
 
 .rce-history-post {
@@ -36,4 +39,16 @@ h2 {
 
 .rce-comment-counts {
     color: rgba(30,55,70,.4);
+}
+
+.rce-table {
+    display: table;
+}
+
+.rce-table .rce-row {
+    display:table-row;
+}
+
+.rce-table .rce-col {
+    display: table-column;
 }

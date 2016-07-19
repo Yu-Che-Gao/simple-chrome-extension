@@ -15,7 +15,12 @@ function sendXHRToMiddle() {
             let responseParse = JSON.parse(response);
             for (let i = 0; i < responseParse.response.length; i++) {
                 let responseJSON = responseParse.response[i];
-                document.getElementById('history').innerHTML += historyLink(responseJSON.link, responseJSON.title) + '<br/>' + historyCounts(responseJSON.posts) + '<br/><br/>';
+                let history = document.getElementById('history');
+
+                history.innerHTML += '<div style="width: 50%;float:left;">' + historyLink(responseJSON.link, responseJSON.title) + '<br/>' + historyCounts(responseJSON.posts) + '</div>';
+                if (i % 3 == 0 && i != 0) {
+                    history.innerHTML += '<br/><br/>';
+                }
             }
         }
     };
