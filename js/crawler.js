@@ -22,3 +22,6 @@ function getPhoneNumberOfPage() {
         return document.querySelector('.tel').innerHTML.trim().slice(0, 12);
     }
 }
+
+
+// function sendOCR

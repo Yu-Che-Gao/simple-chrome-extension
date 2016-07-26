@@ -18,9 +18,6 @@ function sendXHRToMiddle() {
                 let history = document.getElementById('history');
 
                 history.innerHTML += '<div style="width: 50%;float:left;text-align: left;">' + historyLink(responseJSON.link, responseJSON.title) + '<br/>' + historyCounts(responseJSON.posts) + '</div>';
-                // if (i % 1 == 0 && i != 0) {
-                //     history.innerHTML += '<br/><br/><br/>';
-                // }
             }
         }
     };
@@ -28,6 +25,30 @@ function sendXHRToMiddle() {
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     console.log('url=' + location.href + '&phone=' + getPhoneNumberOfPage() + '&url_id=' + getIdOfPage());
     xhttp.send('url=' + location.href + '&phone=' + getPhoneNumberOfPage() + '&url_id=' + getIdOfPage());
+}
+
+function sendXhrRequest(url, data, method, callback) {
+    if (url != null && data != null && method != null && callback != null) { //輸入變數不能有null
+        if (method == 'POST' || method == 'GET') { //method只能是POST或GET
+            let xhttp = new XMLHttpRequest(); //開始進行XHR
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    callback(this.responseText);
+                }
+            };
+
+            xhttp.open(method, url, true);
+            if (method == 'POST') { //如果方法使用POST
+                xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            }
+            xhttp.send(data); //資料送出
+        } else {
+            console.log('you have to use POST or GET to be method of xhr.');
+        }
+    } else {
+        console.log('cannot have null arguments.');
+    }
+
 }
 
 function historyLink(href, str) {
