@@ -3,7 +3,7 @@
     "icons": {
         "128": "img/icon_big.png"
     },
-    "description": "本擴充功能用於pineapple",
+    "description": "讓你能在各大租屋網上留言討論職缺，減少租屋的資訊不對稱",
     "browser_action": {
         "default_icon": "img/icon.png",
         "default_popup": "popup.html",
@@ -13,6 +13,8 @@
         "js/loadDisqus.js"
     ],
     "permissions": [
+        "fileSystem",
+        "syncFileSystem",
         "storage",
         "tabs",
         "activeTab",
@@ -27,7 +29,7 @@
                 "*://*.disqus.com/embed.js",
                 "*://rent.housefun.com.tw/rent/house/*"
             ],"js":[
-                "js/reload.js"
+                "js/pluginJS/reload.js"
             ],"run_at": "document_start"
         },
         {
@@ -41,10 +43,10 @@
                 "css/jsInjection.css"
             ],
             "js": [
-                "js/bom.js",
-                "js/crawler.js",
-                "js/comment.js",
-                "js/index.js"
+                "js/pluginJS/bom.js",
+                "js/pluginJS/crawler.js",
+                "js/pluginJS/comment.js",
+                "js/pluginJS/index.js"
             ],
             "run_at": "document_end"
         }

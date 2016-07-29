@@ -29,7 +29,6 @@ function setDisqus() {
 //Object.setWord(fontColor, fontSize, fontFamily);
 Object.prototype.setWord = function () {
     let attributes = ['color', 'font-size', 'font-family'];
-    let temp = '';
     for (let i = 0; i < attributes.length; i++) {
         if (arguments[i] != null) {
             this.style.cssText += attributes[i] + ':' + arguments[i] + ';';

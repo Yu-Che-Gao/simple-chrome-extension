@@ -15,13 +15,12 @@ function getIdOfPage() {
     }
 }
 
-function getPhoneNumberOfPage() {
+function getPhoneNumberOfPage(callback) {
     if (location.hostname == 'rent.591.com.tw' || location.hostname == 'www.591.com.tw') {
-        return document.querySelector('.num').innerHTML.trim();
+        let num=document.querySelector('.num');
+        return callback(num);
     } else if(location.hostname=='rent.housefun.com.tw') {
-        return document.querySelector('.tel').innerHTML.trim().slice(0, 12);
+        let num=document.querySelector('.tel');
+        return callback(num);
     }
 }
-
-
-// function sendOCR
